@@ -1,0 +1,804 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Quicksand", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.intro-container {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  position: relative;
+}
+
+.intro-container .image-side {
+  flex: 65%;
+  background-image: url("/assets/blog-intro.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.intro-container .content-side {
+  flex: 35%;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  body {
+    font-style: 1rem;
+  }
+
+  .image-side {
+    flex: 100% !important;
+  }
+
+  .content-side {
+    flex: 100% !important;
+  }
+
+  .main-page .header-side {
+    width: 75% !important;
+  }
+
+  .main-page .header-side a h2 {
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-page .header-side a {
+    /*width: 70px !important;*/
+    padding: 10px;
+  }
+
+  .main-page .header-side a:hover {
+    background-color: #fff !important;
+    color: #383838 !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+.intro-container .content-side .content-div {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  animation-name: initialEffect;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.intro-container .content-side .content-div h1 {
+  text-align: center;
+  color: #383838;
+  margin-bottom: 0px;
+}
+
+.intro-container .content-side .content-div h3 {
+  color: #383838;
+  text-align: center;
+  margin-top: 0;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.intro-container .social-side button {
+  background-color: #fff;
+  border: none;
+}
+
+.intro-container .content-side .social-side button i {
+  font-size: clamp(1rem, 2.5vw, 4rem);
+  color: #000;
+}
+
+.intro-container .content-side {
+  position: relative;
+  justify-content: space-evenly;
+}
+
+.intro-container .content-side .social-side {
+  position: relative;
+
+  animation-name: initialEffect;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes initialEffect {
+  0% {
+    left: -500px;
+  }
+
+  /*50%{
+    left: -50px;
+  }*/
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes sectionSideEffect {
+  0% {
+    left: -500px;
+  }
+
+  100% {
+    left: calc(50% - 15%);
+  }
+}
+
+.intro-container .content-side .social-side button {
+  background-color: #eeeeee;
+  margin: 20px;
+  padding: 10px;
+  transition: background-color 2s, border-radius 0.5s;
+}
+
+.intro-container .content-side .social-side button i {
+  font-size: 3rem;
+  color: #383838;
+}
+
+.intro-container .content-side .social-side button:hover {
+  background-color: #383838;
+  border-radius: 20%;
+  cursor: pointer;
+}
+
+.intro-container .content-side .social-side button:hover i {
+  color: #eeeeee;
+  color: white;
+}
+
+.intro-container .content-side section {
+  position: absolute;
+  bottom: 0;
+
+  animation-name: sectionSideEffect;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 25px;
+}
+
+.main-page .header-side {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 10px;
+  align-self: center;
+  width: 50%;
+  background-color: #383838;
+  border-radius: 50px;
+  z-index: 10;
+}
+
+.main-page .header-side a {
+  width: 150px;
+  text-align: center;
+  text-decoration: none;
+  color: #fefefe;
+  transition: all 1s;
+}
+
+.main-page .header-side a:hover {
+  cursor: pointer;
+  background-color: #fefefe;
+  color: #383838;
+}
+
+.main-page #about .container {
+  margin: 5%;
+}
+
+.main-page #about .container div h2 {
+  margin-top: 5%;
+}
+
+.main-page #about .container div {
+  margin-top: 1%;
+}
+
+.main-page #about .container .education .university {
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main-page #about .container .education .university .image {
+  display: inline-block;
+  padding-right: 10px;
+  /*border-right: 1px solid #383838;*/
+}
+
+.main-page #about .container .education .university .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life {
+  margin-top: 10%;
+}
+
+/* tekom */
+.main-page #about .container .work-life .tekom {
+  /*margin-top: 5%;*/
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main-page #about .container .work-life .tekom .image {
+  display: inline-block;
+  padding-right: 10px;
+  /*border-right: 1px solid #383838;*/
+}
+
+.main-page #about .container .work-life .tekom .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life .tekom .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life .tekom .information ul {
+  list-style: none;
+}
+
+.main-page #about .container .work-life .tekom .information ul li {
+  margin-bottom: 10px;
+}
+
+/* cocuk-istanbul */
+.main-page #about .container .work-life .cocuk-istanbul {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main-page #about .container .work-life .cocuk-istanbul .image {
+  display: inline-block;
+  padding-right: 10px;
+  /*border-right: 1px solid #383838;*/
+}
+
+.main-page #about .container .work-life .cocuk-istanbul .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life .cocuk-istanbul .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life .cocuk-istanbul .information ul {
+  list-style: none;
+}
+
+.main-page #about .container .work-life .cocuk-istanbul .information ul li {
+  margin-bottom: 10px;
+}
+
+/* prosistem */
+.main-page #about .container .work-life .prosistem {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main-page #about .container .work-life .prosistem .image {
+  display: inline-block;
+  padding-right: 10px;
+  /*border-right: 1px solid #383838;*/
+}
+
+.main-page #about .container .work-life .prosistem .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life .prosistem .image img {
+  width: 75px;
+}
+
+.main-page #about .container .work-life .prosistem .information ul {
+  list-style: none;
+}
+
+.main-page #about .container .work-life .prosistem .information ul li {
+  margin-bottom: 10px;
+}
+
+.main-page #about .container .certificates {
+  margin-top: 10%;
+}
+
+/* techpro */
+.main-page #about .container .certificates .techpro {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main-page #about .container .certificates .techpro .image {
+  display: inline-block;
+  padding-right: 10px;
+  /*border-right: 1px solid #383838;*/
+}
+
+.main-page #about .container .certificates .techpro .image img {
+  width: 75px;
+}
+
+.main-page #about .container .certificates .techpro .information a:hover {
+  color: #fefefe !important;
+  background-color: #383838 !important;
+  border-radius: 20px !important;
+}
+
+.main-page #about .container .certificates .techpro .information a {
+  padding: 10px;
+  text-decoration: none;
+  color: #383838;
+  transition: all 0.7s;
+}
+
+.main-page #about .container .certificates .techpro .information a:visited {
+  color: #383838;
+  background-color: #fefefe;
+  border-radius: 20px;
+}
+
+/* hackerrank */
+.main-page #about .container .certificates .hackerrank {
+  margin-top: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+
+.main-page #about .container .certificates .hackerrank .image {
+  display: inline-block;
+  padding-right: 10px;
+  /*border-right: 1px solid #383838;*/
+}
+
+.main-page #about .container .certificates .hackerrank .image img {
+  width: 75px;
+}
+
+.main-page #about .container .certificates .hackerrank .information a:hover {
+  color: #fefefe !important;
+  background-color: #383838 !important;
+  border-radius: 20px !important;
+}
+
+.main-page #about .container .certificates .hackerrank .information a {
+  padding: 10px;
+  text-decoration: none;
+  color: #383838;
+  transition: all 0.7s;
+}
+
+.main-page #about .container .certificates .techpro .information a:visited {
+  color: #383838;
+  background-color: #fefefe;
+  border-radius: 20px;
+}
+
+/* hobies */
+.main-page #about .container .hobies .struct {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.main-page #about .container .hobies .photography {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 250px;
+  height: 300px;
+
+  margin-top: 20px;
+
+  position: relative;
+}
+
+.main-page #about .container .hobies .photography h3 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* ZOO */
+.main-page #about .container .hobies .photography a .pic-container-1 {
+  margin-top: 0;
+  width: 246px;
+  height: 250px;
+  background-image: url("/assets/hobies/08C509F8-B3B3-4F2A-8935-AC3885363CE7.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  border-radius: 25px;
+
+  transition: all 0.7s;
+}
+.main-page #about .container .hobies .photography a .pic-container-1:hover {
+  filter: blur(5px);
+}
+
+/* NIGHT */
+.main-page #about .container .hobies .photography a .pic-container-2 {
+  margin-top: 0;
+  width: 246px;
+  height: 250px;
+  background-image: url("/assets/hobies/68AC0879-93F0-4338-98C5-36270C449872.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+
+  transition: all 0.7s;
+}
+.main-page #about .container .hobies .photography a .pic-container-2:hover {
+  filter: blur(5px);
+}
+
+/* STROKE */
+.main-page #about .container .hobies .photography a .pic-container-3 {
+  margin-top: 0;
+  width: 246px;
+  height: 250px;
+  background-image: url("/assets/hobies/D81E2AC6-DA26-445D-907C-9E8F80FD1B71.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+
+  transition: all 0.7s;
+}
+.main-page #about .container .hobies .photography a .pic-container-3:hover {
+  filter: blur(5px);
+}
+
+.main-page #about .container .hobies .photography a:hover h3 {
+  display: block;
+  z-index: 1;
+  color: #eeeeee;
+  background-color: rgba(18, 24, 14, 0.6);
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.main-page #about .container .hobies .struct .photography a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.main-page #about .container .hobies .struct .photography a:last-child {
+  padding: 15px;
+  transition: all 0.7s;
+  border-radius: 30px;
+}
+
+.main-page #about .container .hobies .struct .photography a:last-child:hover {
+  background-color: #383838;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.main-page #portfolio {
+  background-color: #eeeeee;
+}
+
+.main-page #portfolio .container {
+  margin: 5%;
+}
+
+.main-page #portfolio .container .works .ritzy-homes .header-portfolio {
+  margin-top: 2%;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-page #portfolio .container .works .ritzy-homes .summary-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3%;
+  margin-left: 35px;
+}
+
+.main-page #portfolio .container .works .ritzy-homes .summary-portfolio .techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .ritzy-homes
+  .summary-portfolio
+  .techs
+  .element
+  img {
+  width: 60px;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .ritzy-homes
+  .summary-portfolio
+  .link-to-site
+  span
+  a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .ritzy-homes
+  .summary-portfolio
+  .link-to-site
+  span
+  a {
+  transition: all 0.7s;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .ritzy-homes
+  .summary-portfolio
+  .link-to-site
+  span
+  a:hover {
+  color: #fefefe !important;
+  background-color: #383838;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .ritzy-homes
+  .summary-portfolio
+  .link-to-site
+  span
+  a:visited {
+  color: #383838;
+}
+
+/* SAMAKR */
+
+.main-page #portfolio .container .works .samakr {
+  margin-top: 4rem;
+}
+
+.main-page #portfolio .container .works .samakr .header-portfolio {
+  margin-top: 2%;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-page #portfolio .container .works .samakr .header-portfolio a img {
+  width: 200px;
+}
+
+.main-page #portfolio .container .works .samakr .summary-portfolio {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3%;
+  margin-left: 35px;
+}
+
+.main-page #portfolio .container .works .samakr .summary-portfolio .techs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .samakr
+  .summary-portfolio
+  .techs
+  .element
+  img {
+  width: 60px;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .samakr
+  .summary-portfolio
+  .link-to-site
+  span
+  a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .samakr
+  .summary-portfolio
+  .link-to-site
+  span
+  a {
+  transition: all 0.7s;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .samakr
+  .summary-portfolio
+  .link-to-site
+  span
+  a:hover {
+  color: #fefefe !important;
+  background-color: #383838;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.main-page
+  #portfolio
+  .container
+  .works
+  .samakr
+  .summary-portfolio
+  .link-to-site
+  span
+  a:visited {
+  color: #383838;
+}
+
+.main-page #contact {
+  background-color: #fefefe;
+}
+
+.main-page #contact .container {
+  margin: 5%;
+}
+
+.main-page #contact .container .contact-form form {
+  margin-top: 4%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+.main-page #contact .container .contact-form form label {
+  width: 10rem;
+  font-size: 1.5rem;
+}
+
+.main-page #contact .container .contact-form form #input-divs .input {
+  width: 25rem;
+  height: 3rem;
+  border: none;
+  background-color: #efefef;
+  border-radius: 25px;
+  padding: 5px;
+  transition: all 0.7s;
+}
+
+.main-page #contact .container .contact-form form #input-divs textarea {
+  background-color: #efefef;
+  border: none;
+  border-radius: 15px;
+  width: 25rem;
+  transition: all 0.7s;
+  resize: none;
+}
+
+.main-page #contact .container .contact-form form #input-divs .input:hover {
+  outline-style: groove;
+  outline-color: #383838;
+  outline-width: 1px;
+  background-color: #fefefe;
+}
+
+.main-page #contact .container .contact-form form #input-divs .input:focus {
+  outline-style: groove;
+  outline-color: #383838;
+  outline-width: 1px;
+  background-color: #fefefe;
+}
+
+.main-page #contact .container .contact-form form #input-divs textarea:hover {
+  outline-style: groove;
+  outline-color: #383838;
+  outline-width: 1px;
+  background-color: #fefefe;
+}
+
+.main-page #contact .container .contact-form form #input-divs textarea:focus {
+  outline-style: groove;
+  outline-color: #383838;
+  outline-width: 1px;
+  background-color: #fefefe;
+}
+
+.main-page #contact .container .contact-form form button {
+  font-size: 1.2rem;
+  padding: 10px;
+  border-radius: 25px;
+  border: 1px solid #383838;
+  transition: all 0.7s;
+}
+
+.main-page #contact .container .contact-form form button:hover {
+  cursor: pointer;
+  background-color: #fefefe;
+}
+
+@media (max-width: 1100px) {
+  .main-page #contact .container .contact-form form #input-divs .input {
+    width: 20rem;
+  }
+
+  .main-page #contact .container .contact-form form #input-divs textarea{
+    width: 20rem;
+  }
+}
